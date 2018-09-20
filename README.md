@@ -4,7 +4,8 @@ This repository contains the behavioral data for select pedestrians in JAAD data
 In JAAD dataset we identified 686 pedestrians that interact or may potentially interact with the driver. For these pedestrians, in addition to bounding boxes, we provide timestamped behavioral data, behavior attribues as well as scene attributes for each frame. 
 
 ## Behavioral annotations
-This data is produced using BORIS 2 (http://www.boris.unito.it) - event logging software for video observations. We provide both the BORIS files in the original tsv text format and xml...
+This data is produced using BORIS 2 (http://www.boris.unito.it) - event logging software for video observations. We provide both the BORIS files in the original tsv text format and xml format.
+
 Each file contains the name of the video file (e.g. video_0001.mp4), independent variables and timestamped observations.
 The following types of tags and their possible values are defined for each video:
 
@@ -16,7 +17,7 @@ The following types of tags and their possible values are defined for each video
 
 4. road_condition (snow/rain/dry)	whether the road surface is covered in snow/water or is dry..
 
-The following behaviors are defined for all subjects: clear path, crossing, handwave, look, looking, moving fast, moving slow, walking, nod, signal, slow down, speed up, standing, stopped. Some actions are capitalized to distinguish actions that happen on the road vs actions on the sidewalk (e.g. STANDING means that the pedestrian is waiting beyond the curb).  
+The following behaviors are defined for all subjects: clear path, crossing, handwave, look, looking, moving fast, moving slow, walking, nod, signal, slow down, speed up, standing, stopped. Some actions are capitalized to distinguish actions that happen on the road vs actions on the sidewalk (e.g. STANDING means that the pedestrian is standing on the road beyond the curb).  
 
 Behavioral data can be downloaded in the original BORIS tsv format and xml.  
 Below is an example of behavioral data in xml format.
@@ -72,8 +73,6 @@ video_id, pedestrian_id, group_size, direction, designated, signalized, gender, 
 * crossing: 1 - pedestrian completes crossing, 0 - pedestrian does not cross, -1 - no intention of crossing (e.g. waiting at the bus stop, talking to somebody at the curb)
 
 When there are no pedestrians in the video, all attributes are set to "n/a".
-
-
 
 ## Traffic scene elements
 
