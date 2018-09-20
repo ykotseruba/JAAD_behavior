@@ -1,23 +1,7 @@
 # JAAD Behavioral Annotations
 This repository contains the behavioral data for select pedestrians in JAAD dataset. Corresponding video sequences and bounding boxes for pedestrians are available from our project site (http://data.nvision2.eecs.yorku.ca/JAAD_dataset/) and github (https://github.com/ykotseruba/JAAD_pedestrian).
 
-## Pedestrian behavior attributes
-In JAAD dataset we identified 686 pedestrians that interact with the driver. In addition to the timestamped behavioral data we provide additional attributes for each pedestrian in a text file (pedestrian_attributes.txt).  
-Each line lists attributes (comma-separated) for a single pedestrian in the following order:  
-video_id, pedestrian_id, group_size, direction, designated, signalized, gender, age, num_lanes, traffic direction, intersection, crossing
-
-* video_id, pedestrian_id, gender (male/female and n/a for small children) and age (child/young/adult/senior) are self-explanatory
-* group_size: size of the group that the pedestrian is part of (moving or standing together)
-* direction: indicates whether the pedestrian is moving along the direction of car's movement (LONG), crossing in front of the car (LAT) or standing (n/a)
-* designated: the location where the pedestrian is moving/standing is designated for crossing (D) or non-designated (ND)
-* signalized: the location where the pedestrian is moving/standing is signalized (S), i.e. has a stop sign or traffic lights, or not signalized (NS)
-* num_lanes: number of lanes at the place where the pedestrian is moving/standing
-* traffic direction: OW - one way, TW - two way
-* intersection: yes - crossing at the intersection and no otherwise
-* crossing: 1 - pedestrian completes crossing, 0 - pedestrian does not cross, -1 - no intention of crossing (e.g. waiting at the bus stop, talking to somebody at the curb)
-
-When there are no pedestrians in the video, all attributes are set to "n/a".
-
+In JAAD dataset we identified 686 pedestrians that interact or may potentially interact with the driver. For these pedestrians, in addition to bounding boxes, we provide timestamped behavioral data, behavior attribues as well as scene attributes for each frame. 
 
 ## Behavioral annotations
 This data is produced using BORIS 2 (http://www.boris.unito.it) - event logging software for video observations. We provide both the BORIS files in the original tsv text format and xml...
@@ -69,6 +53,27 @@ xml
 ```
 
 Xml files can be read in MATLAB using xml2struct.m script available at (https://www.mathworks.com/matlabcentral/fileexchange/28518-xml2struct)
+
+
+## Pedestrian behavior attributes
+Behavior attributes for each pedestrian are provided as a text file (pedestrian_attributes.txt).  
+
+Each line lists attributes (comma-separated) for a single pedestrian in the following order:  
+video_id, pedestrian_id, group_size, direction, designated, signalized, gender, age, num_lanes, traffic direction, intersection, crossing
+
+* video_id, pedestrian_id, gender (male/female and n/a for small children) and age (child/young/adult/senior) are self-explanatory
+* group_size: size of the group that the pedestrian is part of (moving or standing together)
+* direction: indicates whether the pedestrian is moving along the direction of car's movement (LONG), crossing in front of the car (LAT) or standing (n/a)
+* designated: the location where the pedestrian is moving/standing is designated for crossing (D) or non-designated (ND)
+* signalized: the location where the pedestrian is moving/standing is signalized (S), i.e. has a stop sign or traffic lights, or not signalized (NS)
+* num_lanes: number of lanes at the place where the pedestrian is moving/standing
+* traffic direction: OW - one way, TW - two way
+* intersection: yes - crossing at the intersection and no otherwise
+* crossing: 1 - pedestrian completes crossing, 0 - pedestrian does not cross, -1 - no intention of crossing (e.g. waiting at the bus stop, talking to somebody at the curb)
+
+When there are no pedestrians in the video, all attributes are set to "n/a".
+
+
 
 ## Traffic scene elements
 
