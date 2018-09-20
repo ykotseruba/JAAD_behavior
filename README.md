@@ -83,8 +83,7 @@ Note: if no range is provided, the scene element is visible in all frames of the
 
 e.g. ```video_0005, 1: 1-30; 1: 90-240; 7;```
 
-stop sign (1) is visible in frames 1-30 and 90-240
-the whole scene is filmed in a parking lot (7)
+translates to the following : stop sign (1) is visible in frames 1-30 and 90-240, the entire video is filmed in a parking lot (7).
 
 ### Citing us
 
