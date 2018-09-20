@@ -81,7 +81,8 @@ The text is formatted as follows:
 video_id, attr_id: start_frame-end_frame; attr_id: start_frame-end_frame;  
 Note: if no range is provided, the scene element is visible in all frames of the video.  
 
-e.g. video_0005, 1: 1-30; 1: 90-240; 7;
+e.g. ```video_0005, 1: 1-30; 1: 90-240; 7;```
+
 stop sign (1) is visible in frames 1-30 and 90-240
 the whole scene is filmed in a parking lot (7)
 
