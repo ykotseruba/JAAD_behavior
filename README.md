@@ -1,4 +1,7 @@
 # JAAD Behavioral Annotations
+
+# NOTE: these annotations are deprecated, please use new annotations in [JAAD](https://github.com/ykotseruba/JAAD) repo.
+
 This repository contains the behavioral data for select pedestrians in JAAD dataset. Corresponding video sequences and bounding boxes for pedestrians are available from our project site (http://data.nvision2.eecs.yorku.ca/JAAD_dataset/) and github (https://github.com/ykotseruba/JAAD_pedestrian).
 
 In JAAD dataset we identified 686 pedestrians that interact or may potentially interact with the driver. For these pedestrians, in addition to bounding boxes, we provide timestamped behavioral data, behavior attribues as well as scene attributes for each frame. 
